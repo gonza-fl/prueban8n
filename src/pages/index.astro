@@ -1,16 +1,64 @@
 ---
-
+const webhookUrl = import.meta.env.PUBLIC_N8N_WEBHOOK_URL;
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<!doctype html>
+<html lang='es'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Prueba N8N</title>
+    <link
+      href='https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css'
+      rel='stylesheet'
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: content-box;
+      }
+
+      header {
+        padding: 1rem;
+        background-color: rgb(40, 40, 210);
+        display: flex;
+        align-items: center;
+      }
+
+      header h1 {
+        color: aliceblue;
+        font-size: 4em;
+        margin-left: 4em;
+      }
+
+      main {
+        padding: 2em;
+      }
+
+      #subtitle {
+        font-size: larger;
+        font-weight: 800;
+        margin-bottom: 1em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <img src='/assets/g.dt.png' alt='logo' height='200' width='200' />
+      <h1>Hola N8N 👋🏽</h1>
+    </header>
+
+    <main>
+      <p id='subtitle'>Ejemplo de web para probar el chat</p>
+      <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. A in quae ducimus facere soluta! Doloribus eveniet, deserunt soluta suscipit explicabo enim quia aut aliquam recusandae sint id consequatur, est fugiat.
+			Qui blanditiis in sunt dolorum rem sequi ipsa, suscipit error facilis excepturi doloribus? Enim magnam aliquam pariatur error sit, veniam eveniet nemo? Molestiae sit in aliquid, consequuntur cum beatae id.
+			Nemo suscipit consequatur facere aliquid ab aut repellendus nihil vitae molestiae neque eos iure libero recusandae at porro rem debitis est officiis inventore ducimus, dolor odit delectus commodi placeat. Omnis. </p>
+    </main>
+
+    <div id='n8n-chat'></div>
+
+    <script type='module' src='/src/scripts/chat.js'></script>
+  </body>
 </html>
